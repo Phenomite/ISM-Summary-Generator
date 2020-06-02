@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ISM Controls Summary</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+        <!--[if lt IE 9]>
+                <script src="assets/js/html5shiv.min.js"></script>
+                <script src="assets/js/respond.min.js"></script>
+                <![endif]-->
+
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- DataTables -->
+        <link href="assets/css/dataTables.bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/responsive.dataTables.min.css" rel="stylesheet">
+
+        <!-- Custom Theme Style -->
+        <style type="text/css">
+            <%= styles %>
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <div class="container-fluid">
+                <p class="navbar-text">
+                    <a href="?search=" title="Clear search filter"><%= controlsTableName %></a>
+                </p>
+            </div>
+        </nav>
+
+        <div class="main_conainer">
+            <div class="row">
+                <%= controlsOverview %>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/Chart.min.js"></script>
+
+        <!-- DataTables -->
+        <script src="assets/js/jquery.dataTables.min.js"></script>
+        <script src="assets/js/dataTables.bootstrap.min.js"></script>
+        <script src="assets/js/dataTables.responsive.min.js"></script>
+
+        <!-- Custom -->
+        <script>
+            $(document).ready(function () {
+                $('#controls-table').dataTable({
+                    "order": [
+                        [0, "asc"]
+                    ],
+                    "lengthMenu": [
+                        [
+                            50, 100, 150, -1
+                        ],
+                        [
+                            50, 100, 150, "All"
+                        ]
+                    ],
+                    "stateSave": true
+                });
+
+                <%= genericScript %>
+            });
+        </script>
+    </body>
+</html>
