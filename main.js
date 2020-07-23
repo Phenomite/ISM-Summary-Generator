@@ -37,4 +37,4 @@ rp(urlCyberISM).then(function (html) {
 }).catch(function (err) {
 	console.error("You might have to change the url and CSS selector to find the new ISM XML!");
 });
-
+console.log("Done! view it at :: " + process.env.npm_config_outputFolder + "/index.html");
