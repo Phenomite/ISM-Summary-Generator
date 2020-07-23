@@ -1,6 +1,8 @@
 # Australian Government Information Security Manual (ISM) Summary Generator
 
-This is a 1 command system to extract the latest ISM and build a searchable web-template filled with all the ISM security controls from <https://cyber.gov.au>.
+This is a 1 command system to extract the latest ISM and build a searchable web-template filled with all the ISM security controls from <https://www.cyber.gov.au/ism>.
+
+## [Live ISM Controls Summary - phenomite.github.io](https://phenomite.github.io/ISM-Summary-Generator)
 
 ---
 
